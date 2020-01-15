@@ -36,13 +36,13 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-#include <boost/numpy.hpp>
+#include <boost/python/numpy.hpp>
 #include <boost/scoped_array.hpp>
 
 #include <ur_kinematics/ur_kin.h>
 
 namespace p = boost::python;
-namespace np = boost::numpy;
+namespace np = boost::python::numpy;
 
 np::ndarray forward_wrapper(np::ndarray const & q_arr) {
   if(q_arr.get_dtype() != np::dtype::get_builtin<double>()) {
